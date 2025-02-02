@@ -1,0 +1,178 @@
+body {
+    display: flex;
+    justify-content: center;
+    /* Center the maze container */
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Tahoma', Geneva, Verdana, sans-serif;
+    /* background-color: rgb(12, 12, 31); */
+    background-image: url("back1.jpg");
+    color: white;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    height: 100vh;
+    justify-content: center;
+    /* Center the maze container */
+    align-items: center;
+    
+    /* Position controls to the left */
+    top: 0px;
+    left: 0px;
+    padding-left: 2%;
+    padding-right: 2%;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.2);
+    /* background-color: rgb(88, 88, 139); */
+    backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.541);
+
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+}
+
+#maze-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid #c5ccdf;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.541);
+
+    border-radius: 2px;
+    margin-left: 50px;
+    
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.wall {
+    background-color: black;
+}
+
+.path {
+    background-color: rgb(123 130 151);
+}
+
+.start {
+    background-color: rgb(99, 182, 99);
+}
+
+.end {
+    background-color: #0b4f6c;
+}
+
+.player {
+    background-color: yellow;
+}
+
+.visited {
+    background-color: rgb(243, 231, 198);
+}
+
+
+:root{
+    --light_blue_shade: rgb(88 97 123);
+    --dark_blue_shade: rgb(46, 51, 66);
+    --text_color: rgb(239, 243, 255);
+
+}
+
+
+
+/* i just copy paste repreated elements */
+
+
+#generate-maze{
+    background-color: var(--light_blue_shade);
+    padding: 10px 25px;
+    font-size: 1.28rem;
+    color: var(--text_color);
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    transition: 0.15s;
+
+}
+
+#generate-maze:hover{
+    scale: 1.1;
+    background-color: var(--dark_blue_shade);
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.541);
+    backdrop-filter: blur(10px);
+
+
+}
+
+#generate-maze:active{
+    scale: 0.95;
+    background-color: rgb(134, 233, 233);
+    color: rgb(90, 90, 90);
+}
+
+
+
+
+
+#solve-maze{
+    background-color: var(--light_blue_shade);
+    padding: 10px 25px;
+    font-size: 1.17rem;
+    color: white;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    transition: 0.15s;
+
+}
+
+#solve-maze:hover{
+    scale: 1.1;
+    background-color: var(--dark_blue_shade);
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.541);
+
+}
+
+#solve-maze:active{
+    scale: 0.95;
+    background-color: rgb(134, 233, 233);
+    color: rgb(90, 90, 90);
+}
+
+
+
+
+#play-again{
+    background-color: var(--light_blue_shade);
+    padding: 10px 25px;
+    font-size: 1.3rem;
+    color: white;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    display: none;
+    transition: 0.15s;
+
+}
+
+#play-again:hover{
+    scale: 1.1;
+    background-color: var(--dark_blue_shade);
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.541);
+
+}
+
+#play-again:active{
+    scale: 0.95;
+    background-color: rgb(134, 233, 233);
+    color: rgb(90, 90, 90);
+}

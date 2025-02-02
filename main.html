@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Maze Solver</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+  <div id="controls">
+    <h1>Maze Controls</h1>
+    <label for="rows">Rows:</label>
+    <input type="number" id="rows" value="10" min="5" max="50">
+    <label for="cols">Columns:</label>
+    <input type="number" id="cols" value="10" min="5" max="50">
+    <!-- <label for="player-color">Player Color:</label> -->
+    <!-- <input type="color" id="player-color" value="#FFFF00"> -->
+    <button id="generate-maze">New Maze</button>
+    <button id="solve-maze">Solve Maze</button>
+    <button id="play-again">Play Again</button>
+  </div>
+  <div id="maze-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
